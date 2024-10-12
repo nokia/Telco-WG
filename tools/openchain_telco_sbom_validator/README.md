@@ -5,6 +5,8 @@ the [OpenChain Telco SBOM Guide](https://github.com/OpenChain-Project/Telco-WG/b
 
 # Installation
 
+01
+
 To install from [PyPI](https://pypi.org/project/openchain-telco-sbom-validator/), issue `pip3 install openchain-telco-sbom-validator`.
 
 # Manual installation
