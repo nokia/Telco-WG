@@ -2,7 +2,7 @@
 
 A script to validate SBOMs against
 the [OpenChain Telco SBOM Guide](https://github.com/OpenChain-Project/Telco-WG/blob/main/OpenChain-Telco-SBOM-Guide_EN.md).
-
+ 
 What is new in version 0.3.1:
 * new option `--noassertion` will list fields that have value NOASSERTION,
 * implement the strict mode for tool name and version (presence of "-").
