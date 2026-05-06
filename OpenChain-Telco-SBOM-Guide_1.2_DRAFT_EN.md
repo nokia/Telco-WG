@@ -191,11 +191,13 @@ In SPDX 3.0.1, the file name SHOULD end with ```.spdx3.json```, it MUST end with
 This is the recommended naming from the SPDX standard.
 
 ### 3.6 SBOM Build information
-SBOMs conforming to the OpenChain Telco SBOM Guide MUST contain information as when they were created. 
+SBOMs conforming to the OpenChain Telco SBOM Guide MUST contain information as when they were created and to which version of the software they were created.
 
 In SPDX 2.2 and 2.3:
 
 The `Created` field MUST contain the time when the SBOM was created.
+
+The `CreatorComment` field MUST contain the version of the software.
 
 The `Creator` field MUST:
 * contain a line with the `Organization` keyword;
@@ -214,6 +216,7 @@ In SPDX 3:
 * CreationInfo.createdBy MUST point to a field of type "Organization",
 * CreationInfo.createdUsing MUST point to a field of type "Tool",
 * CreationInfo.created MUST contain the time when the SBOM was created,
+* the software version MUST be put in the `software_packageVersion` property,
 * the SBOM types MUST be put in the `sbomType` property.
 
 #### 3.6.1 Verification and reference material
