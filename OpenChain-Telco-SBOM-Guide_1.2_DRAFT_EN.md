@@ -180,11 +180,18 @@ As the Tag:Value format is also human readable it has been chosen so that both t
 
 In SPDX 2.2 and 2.3, in Tag:Value format the file name SHOULD end with ```.spdx```.
 
-In SPDX 2.2 and 2.3, in JSON format, the file name MUST end with ```.json```, it SHOULD end * with ```.spdx.json```.
+In SPDX 2.2 and 2.3, in JSON format, the file name MUST end with ```.json```, it SHOULD end with ```.spdx.json```.
 
-In SPDX 3.0.1, the file name SHOULD end with ```.spdx3.json```, it MUST end with ```.json``` or ```.jsonld```.
+In SPDX 3.0.1, the file name MUST end with ```.json``` or ```.jsonld```, it SHOULD end with ```.spdx3.json```.
 
 #### 3.5.1 Verification and reference material
+
+SPDX 2:
+* https://spdx.github.io/spdx-spec/v2.2.2/conformance/
+* https://spdx.github.io/spdx-spec/v2.3/conformance/
+
+SPDX 3:
+* https://github.com/spdx/spdx-spec/blob/develop/docs/serializations.md
 
 #### 3.5.2 Rationale
 
