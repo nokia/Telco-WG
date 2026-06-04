@@ -187,11 +187,11 @@ In SPDX 3.0.1, the file name MUST end with ```.json``` or ```.jsonld```, it SHOU
 #### 3.5.1 Verification and reference material
 
 SPDX 2:
-* https://spdx.github.io/spdx-spec/v2.2.2/conformance/
-* https://spdx.github.io/spdx-spec/v2.3/conformance/
+* https://spdx.github.io/spdx-spec/v2.2.2/conformance/#44-standard-data-format-requirements
+* https://spdx.github.io/spdx-spec/v2.3/conformance/#44-standard-data-format-requirements
 
 SPDX 3:
-* https://github.com/spdx/spdx-spec/blob/develop/docs/serializations.md
+* https://github.com/spdx/spdx-spec/blob/develop/docs/serializations.md (File naming section)
 
 #### 3.5.2 Rationale
 
@@ -372,7 +372,7 @@ The following statement MAY be used as statement in the RFP document, order docu
   * https://standards.iso.org/ittf/PubliclyAvailableStandards/c081039_ISO_IEC_5230_2020(E).zip
 * The Minimum Elements For a Software Bill of Materials (SBOM) a.k.a. “NTIA minimum elements”
   * https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom
-* 2025 Minimum Elements for a Software Bill of Materials (SBOM)
+* 2025 Minimum Elements for a Software Bill of Materials (SBOM) Public Comment Draft August 2025
   * https://www.cisa.gov/sites/default/files/2025-08/2025_CISA_SBOM_Minimum_Elements.pdf
 * Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM), Third Edition
   * https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024
