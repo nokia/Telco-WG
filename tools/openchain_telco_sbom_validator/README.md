@@ -3,6 +3,9 @@
 A script to validate SBOMs against
 the [OpenChain Telco SBOM Guide](https://github.com/OpenChain-Project/Telco-WG/blob/main/OpenChain-Telco-SBOM-Guide_EN.md).
 
+What is new in version 0.3.5:
+* better check in `--strict-purl-check`
+
 What is new in version 0.3.4:
 * require spdx-tools >= 0.8.5
 * require ntia-conformance-checker >= 5.0.0
@@ -59,8 +62,8 @@ options:
   --debug               Prints debug logs.
   --nr-of-errors NR_OF_ERRORS
                         Sets a limit on the number of errors displayed.
-  --strict-purl-check   Runs a strict check on the given purls. The default behaviour is to run a non-strict purl check
-                        meaning that it is not checked if the purl is translating to a downloadable URL.
+  --strict-purl-check   Runs a strict check on the given PURLs. The default behaviour is to run a non-strict PURL check
+                        meaning that it is not checked if the PURL is translating to a downloadable URL.
   --strict-url-check    Runs a strict check on the URLs of the PackageDownloadLocation. Strict check means that the validator
                         checks also if the given URL can be accessed. The default behaviour is to run a non-strict URL
                         check, meaning that it is not checked if the URL points to a valid page. Strict URL check
@@ -100,7 +103,7 @@ def main():
 
     # Do validate
     result, problems = myValidator.validate(filePath,          # path to the SPDX file as a string
-                                            strict_purl_check, # If strict purl check is needed
+                                            strict_purl_check, # If strict PURL check is needed
                                             strict_url_check)  # if strict URL check is needed
 
     # Print results in an uniform way

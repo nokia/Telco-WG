@@ -114,9 +114,9 @@ def parseArguments(additionalArguments: AdditionalArguments = AdditionalArgument
     parser.add_argument('--nr-of-errors',
                         help='Sets a limit on the number of errors displayed.')
     parser.add_argument('--strict-purl-check', action="store_true",
-                        help='Runs a strict check on the given purls. The default behaviour is to'
-                        ' run a non-strict purl check meaning that it is not checked if the'
-                        ' purl is translating to a downloadable URL.')
+                        help='Runs a strict check on the given PURLs. The default behaviour is to'
+                        ' run a non-strict PURL check meaning that it is not checked if the'
+                        ' PURL is translating to a downloadable URL.')
     parser.add_argument('--strict-url-check', action="store_true",
                         help='Runs a strict check on the URLs of the PackageDowloadLocation. Strict check'
                         ' means that the validator checks also if the given URL can be accessed.'
@@ -162,7 +162,7 @@ def parseArguments(additionalArguments: AdditionalArguments = AdditionalArgument
             logger.error(f"nr-of-errors must be a number and not {args.nr_of_errors}")
             sys.exit(1)
     if args.strict_purl_check:
-        logger.info("Running strict checks for purls, what means that it is tested if the purls can be translated to a downloadable url.")
+        logger.info("Running strict checks for PURLs, what means that it is tested if the PURLs can be translated to a downloadable url.")
     if args.strict_url_check:
         logger.info("Running strict checks for URL, what means that it is tested if the PackageDowloadLocation fields are pointing to real pages.")
 

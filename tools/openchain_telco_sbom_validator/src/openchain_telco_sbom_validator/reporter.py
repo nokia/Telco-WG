@@ -45,7 +45,7 @@ def reportCli(result, problems, nr_of_errors, input, guide_version, strict, noas
 
         if strict_purl_check:
             if len(incorrect_purls):
-                print("Fields with purl that cannot be converted to a downloadable URL:")
+                print("Fields with PURL that cannot be converted to a downloadable URL:")
                 printTable(incorrect_purls, problems.print_file)
 
         if strict_url_check:

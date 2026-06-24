@@ -23,6 +23,7 @@ from spdx_tools.spdx.model.relationship import RelationshipType
 from spdx_tools.spdx.model.checksum import ChecksumAlgorithm
 from spdx_tools.spdx import document_utils
 from packageurl.contrib import purl2url
+from fetchcode import fetch
 import ntia_conformance_checker as ntia
 import validators
 import requests
@@ -539,7 +540,20 @@ class Validator:
                                                 Problem.SEVERITY_INC_PURL,
                                                 file)
                             else:
-                                logger.debug(f"Strict PURL check is happy {url}")
+                                try:
+                                    logger.debug("Checking Package-URL location")
+                                    page = fetch(ref.locator)
+                                    logger.debug(f"Strict PURL check is happy {url}")
+                                except Exception as err:
+                                    logger.debug(f"Exception received ({format(err)})")
+                                    problems.append("Invalid field in Package",
+                                                    package.spdx_id,
+                                                    package.name,
+                                                    f"Package-URL field converts to a nonexisting page ({url})",
+                                                    Problem.SCOPE_OPEN_CHAIN,
+                                                    Problem.SEVERITY_INC_PURL,
+                                                    file)
+
                 if strict and not purlFound:
                     problems.append("Missing mandatory field from Package",
                                     package.spdx_id,
